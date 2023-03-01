@@ -68,10 +68,38 @@ then
 	mkdir -p $caddir
 	setup
 	echo "Finished executing..."
+	echo
+	xschem -v
+	ngspice -v
+	klayout -v
+	codegen_main --version # xls
+	yosys --version
+	sby --help
+	iverilog -V
+	openroad -version
+	netgen -batch quit
+	magic -dnull -noconsole --version
+	echo exit | flow.tcl -interactive # openlane
+	echo $PDK_ROOT
+	echo $PDK
 	exit 1
 else
 	setup
 	echo "Finished executing..."
+	echo
+	xschem -v
+	ngspice -v
+	klayout -v
+	codegen_main --version # xls
+	yosys --version
+	sby --help
+	iverilog -V
+	openroad -version
+	netgen -batch quit
+	magic -dnull -noconsole --version
+	echo exit | flow.tcl -interactive # openlane
+	echo $PDK_ROOT
+	echo $PDK
 	exit 1
 fi
 
