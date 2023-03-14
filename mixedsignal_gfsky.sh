@@ -1,8 +1,5 @@
 #!/bin/sh
 
-i=0
-j=0
-
 enterdir() {
 cd $1/$2/
 }
@@ -34,7 +31,7 @@ setup() {
 		then
 			rm -f "$HOME/$caddir/silicon-installer${i}.sh"
 		fi
-		((i+=1))
+		i=$((i+=1))
 	done
 	
 	#Update the repo URL with the latest release on https://github.com/proppy/conda-eda/releases
@@ -49,7 +46,7 @@ setup() {
 		then
 			rm -rf "$HOME/mixed-signal.gfsky_${j}/"
 		fi
-		((j+=1))
+		j=$((j+=1))
 	done
 	
 	bash $HOME/$caddir/silicon-installer${i}.sh -b -p $HOME/mixed-signal.gfsky_${j}/
@@ -57,6 +54,8 @@ setup() {
 }
 ###################################################################################################
 cd ~
+i=0
+j=0
 
 HOME=$PWD
 caddir="Downloads" #change the folder name as you like
