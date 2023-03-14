@@ -27,11 +27,9 @@ setup() {
 		echo "File \"$HOME/$caddir/silicon-installer${i}.sh\" already exists!"
 		echo -n "Do you want to remove the existing installer file [y/n]? :  "
 		read ans
-		if [ "$ans" == "y"] || [ "$ans" == "Y" ]
+		if [ "$ans" == "y" || "$ans" == "Y" ]
 		then
 			rm -f "$HOME/$caddir/silicon-installer${i}.sh"
-		else
-			
 		fi
 		((i+=1))
 	done
@@ -44,7 +42,7 @@ setup() {
 		echo "Directory \"$HOME/mixed-signal.gfsky_${j}/\" already exists!"
 		echo -n "Do you want to remove the existing installer directory [y/n]? :  "
 		read ans
-		if [ "$ans" == "y"] || [ "$ans" == "Y" ]
+		if [ "$ans" == "y" || "$ans" == "Y" ]
 		then
 			rm -rf "$HOME/mixed-signal.gfsky_${j}/"
 		fi
