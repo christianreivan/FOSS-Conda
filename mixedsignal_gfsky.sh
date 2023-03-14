@@ -1,5 +1,8 @@
 #!/bin/sh
 
+i=0
+j=0
+
 enterdir() {
 cd $1/$2/
 }
@@ -54,8 +57,7 @@ setup() {
 }
 ###################################################################################################
 cd ~
-i=0
-j=0
+
 HOME=$PWD
 caddir="Downloads" #change the folder name as you like
 
