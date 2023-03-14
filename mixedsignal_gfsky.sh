@@ -30,6 +30,8 @@ setup() {
 		if [ "$ans" == "y"] || [ "$ans" == "Y" ]
 		then
 			rm -f "$HOME/$caddir/silicon-installer${i}.sh"
+		else
+			
 		fi
 		((i+=1))
 	done
